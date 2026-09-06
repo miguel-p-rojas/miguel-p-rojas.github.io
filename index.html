@@ -1,3 +1,1344 @@
-<a href="Resume.pdf" download>
-    Download Resume
-</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Miguel Paraco | Finance Student</title>
+
+    <meta name="description"
+          content="Miguel Paraco — Finance student at the University of Utah">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #070b12;
+            color: #f5f7fb;
+            line-height: 1.6;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 8%;
+
+            background: rgba(7, 11, 18, 0.8);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .logo span {
+            color: #8b5cf6;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #9ba6b8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 120px 20px 80px;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(139,92,246,0.22),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 80% 30%,
+                    rgba(56,213,232,0.14),
+                    transparent 30%
+                );
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .tag {
+            display: inline-block;
+
+            padding: 8px 16px;
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            border-radius: 50px;
+
+            background: rgba(255,255,255,0.04);
+
+            color: #cbd5e1;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 9vw, 105px);
+
+            line-height: 0.9;
+
+            letter-spacing: -6px;
+
+            margin-bottom: 30px;
+        }
+
+        .gradient {
+            background: linear-gradient(
+                90deg,
+                #ffffff,
+                #a78bfa,
+                #67e8f9
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .hero p {
+            max-width: 720px;
+
+            margin: auto;
+
+            color: #9ba6b8;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+        }
+
+        .buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            margin-top: 35px;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 14px 22px;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-4px);
+        }
+
+        .primary {
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #8b5cf6,
+                    #6366f1
+                );
+
+            box-shadow:
+                0 12px 35px rgba(99,102,241,0.25);
+        }
+
+        .secondary {
+            color: white;
+
+            border:
+                1px solid rgba(255,255,255,0.12);
+
+            background:
+                rgba(255,255,255,0.04);
+        }
+
+        .secondary:hover {
+            background:
+                rgba(255,255,255,0.09);
+        }
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            width: 86%;
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 100px 0;
+        }
+
+        .section-label {
+            color: #67e8f9;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            margin-bottom: 10px;
+        }
+
+        section h2 {
+            font-size: 44px;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 15px;
+        }
+
+        .description {
+            color: #9ba6b8;
+
+            max-width: 720px;
+
+            margin-bottom: 40px;
+
+            line-height: 1.8;
+        }
+
+        /* ================= STATS ================= */
+
+        .stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .stat {
+            padding: 25px;
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+
+            border-radius: 18px;
+
+            background:
+                rgba(255,255,255,0.04);
+        }
+
+        .stat strong {
+            display: block;
+
+            font-size: 30px;
+
+            margin-bottom: 5px;
+        }
+
+        .stat span {
+            color: #8e99aa;
+
+            font-size: 13px;
+        }
+
+        /* ================= CARDS ================= */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            padding: 30px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,0.04);
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+
+            border-color:
+                rgba(139,92,246,0.45);
+
+            background:
+                rgba(255,255,255,0.06);
+        }
+
+        .icon {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 14px;
+
+            background:
+                rgba(139,92,246,0.14);
+
+            color: #c4b5fd;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #9ba6b8;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+        /* ================= COURSEWORK ================= */
+
+        .coursework {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .course {
+            padding: 24px;
+
+            border-left:
+                2px solid #8b5cf6;
+
+            background:
+                rgba(255,255,255,0.035);
+
+            border-radius: 0 15px 15px 0;
+        }
+
+        .course h3 {
+            font-size: 16px;
+
+            margin-bottom: 6px;
+        }
+
+        .course p {
+            color: #929daf;
+
+            font-size: 13px;
+        }
+
+        /* ================= RESUME ================= */
+
+        .resume-box {
+            display: grid;
+
+            grid-template-columns:
+                1.3fr 0.7fr;
+
+            gap: 30px;
+
+            align-items: center;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(139,92,246,0.14),
+                    rgba(56,213,232,0.05)
+                );
+
+            border:
+                1px solid rgba(255,255,255,0.1);
+        }
+
+        .resume-box h3 {
+            font-size: 30px;
+
+            margin: 12px 0;
+        }
+
+        .resume-box p {
+            color: #9ba6b8;
+
+            margin-bottom: 25px;
+        }
+
+        .badge {
+            display: inline-block;
+
+            color: #e9c46a;
+
+            border:
+                1px solid rgba(233,196,106,0.25);
+
+            background:
+                rgba(233,196,106,0.06);
+
+            padding: 7px 12px;
+
+            border-radius: 50px;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+        }
+
+        .resume-preview {
+            min-height: 230px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            border:
+                1px dashed rgba(255,255,255,0.2);
+
+            border-radius: 18px;
+
+            background:
+                rgba(255,255,255,0.025);
+        }
+
+        .resume-icon {
+            font-size: 70px;
+
+            margin-bottom: 10px;
+        }
+
+        .resume-preview span {
+            color: #8d98a9;
+
+            font-size: 13px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .contact-card {
+            display: block;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,0.04);
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-6px);
+
+            border-color:
+                rgba(56,213,232,0.4);
+        }
+
+        .contact-card small {
+            display: block;
+
+            color: #8e99aa;
+
+            margin-top: 6px;
+
+            word-break: break-word;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            width: 86%;
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 40px 0 60px;
+
+            border-top:
+                1px solid rgba(255,255,255,0.08);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #687386;
+
+            font-size: 13px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 800px) {
+
+            nav {
+                padding: 18px 6%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                letter-spacing: -4px;
+            }
+
+            .stats,
+            .cards,
+            .coursework,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resume-box {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                width: 90%;
+
+                padding:
+                    70px 0;
+            }
+
+            section h2 {
+                font-size: 35px;
+            }
+
+            footer {
+                width: 90%;
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <div class="logo">
+        MIGUEL<span>.</span>
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#education">Education</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#resume">Resume</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- ================= HERO ================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="tag">
+
+            University of Utah · David Eccles School of Business
+
+        </div>
+
+
+        <h1>
+
+            Miguel
+
+            <span class="gradient">
+                Paraco
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Finance student pursuing a Bachelor of Science in Finance
+            with an Advanced Financial Analysis emphasis. Interested in
+            financial analysis, business, accounting, markets, and
+            data-driven decision making.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                class="button primary"
+                href="#resume">
+
+                View My Resume ↓
+
+            </a>
+
+
+            <a
+                class="button secondary"
+                href="#contact">
+
+                Contact Me →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="section-label">
+        01 — About
+    </div>
+
+
+    <h2>
+        Building a future in finance.
+    </h2>
+
+
+    <p class="description">
+
+        I am currently studying Finance at the University of Utah's
+        David Eccles School of Business. My academic path combines
+        financial analysis, accounting, economics, statistics,
+        spreadsheet analysis, and business leadership.
+
+    </p>
+
+
+    <div class="stats">
+
+        <div class="stat">
+
+            <strong>
+                3.45
+            </strong>
+
+            <span>
+                GPA / 4.0
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                2029
+            </strong>
+
+            <span>
+                Expected Graduation
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                AFA
+            </strong>
+
+            <span>
+                Advanced Financial Analysis
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                Dean's
+            </strong>
+
+            <span>
+                List · Summer 2026
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education">
+
+    <div class="section-label">
+        02 — Education
+    </div>
+
+
+    <h2>
+        Academic foundation.
+    </h2>
+
+
+    <p class="description">
+
+        University of Utah — David Eccles School of Business
+
+        <br>
+
+        Bachelor of Science, Finance · May 2029
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="icon">
+                U
+            </div>
+
+            <h3>
+                University of Utah
+            </h3>
+
+            <p>
+                David Eccles School of Business
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                $
+            </div>
+
+            <h3>
+                Finance
+            </h3>
+
+            <p>
+                Bachelor of Science in Finance with an
+                Advanced Financial Analysis emphasis.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                ★
+            </div>
+
+            <h3>
+                Recognition
+            </h3>
+
+            <p>
+                3.45/4.0 GPA · Dean's List Summer 2026 ·
+                TheDream.US Scholarship.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= COURSEWORK ================= -->
+
+<section>
+
+    <div class="section-label">
+        03 — Coursework
+    </div>
+
+
+    <h2>
+        Relevant coursework.
+    </h2>
+
+
+    <p class="description">
+
+        Coursework supporting my preparation for finance and
+        financial analysis.
+
+    </p>
+
+
+    <div class="coursework">
+
+
+        <div class="course">
+
+            <h3>
+                AP Calculus
+            </h3>
+
+            <p>
+                Fundamental calculus concepts including
+                differentiation and integration.
+            </p>
+
+        </div>
+
+
+        <div class="course">
+
+            <h3>
+                Financial Accounting
+            </h3>
+
+            <p>
+                GAAP principles, business transactions,
+                and financial statements.
+            </p>
+
+        </div>
+
+
+        <div class="course">
+
+            <h3>
+                Spreadsheet Analysis
+            </h3>
+
+            <p>
+                Excel models, PivotTables, What-If Analysis,
+                and Data Analysis.
+            </p>
+
+        </div>
+
+
+        <div class="course">
+
+            <h3>
+                Markets & Institutions
+            </h3>
+
+            <p>
+                Financial markets, banking, bonds,
+                interest rates, and risk-return.
+            </p>
+
+        </div>
+
+
+        <div class="course">
+
+            <h3>
+                Business Statistics
+            </h3>
+
+            <p>
+                Statistical models, probabilities,
+                and confidence levels.
+            </p>
+
+        </div>
+
+
+        <div class="course">
+
+            <h3>
+                Principles of Microeconomics
+            </h3>
+
+            <p>
+                Supply, demand, consumer wellbeing,
+                and national wealth.
+            </p>
+
+        </div>
+
+
+        <div class="course">
+
+            <h3>
+                Responsibilities of Business Leader
+            </h3>
+
+            <p>
+                Diversity, ethics, and corporate
+                responsibility.
+            </p>
+
+        </div>
+
+
+        <div class="course">
+
+            <h3>
+                Foundation of Business Thought
+            </h3>
+
+            <p>
+                History and evolution of Economics,
+                Finance, and Accounting.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+    <div class="section-label">
+        04 — Skills & Certifications
+    </div>
+
+
+    <h2>
+        Tools & capabilities.
+    </h2>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="icon">
+                EX
+            </div>
+
+            <h3>
+                Microsoft Office
+            </h3>
+
+            <p>
+
+                Microsoft Office 365
+
+                <br><br>
+
+                Excel · PowerPoint · Word
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                ✓
+            </div>
+
+            <h3>
+                Certifications
+            </h3>
+
+            <p>
+
+                Microsoft Office Excel Specialist
+
+                <br><br>
+
+                Microsoft Office PowerPoint Specialist
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                ES
+            </div>
+
+            <h3>
+                Languages
+            </h3>
+
+            <p>
+
+                English
+
+                <br>
+
+                Spanish
+
+                <br><br>
+
+                Seal of Biliteracy
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= RESUME ================= -->
+
+<section id="resume">
+
+    <div class="section-label">
+        05 — Resume
+    </div>
+
+
+    <h2>
+        The full résumé.
+    </h2>
+
+
+    <p class="description">
+
+        View or download my complete resume for a detailed
+        overview of my education, coursework, skills,
+        certifications, and academic achievements.
+
+    </p>
+
+
+    <div class="resume-box">
+
+
+        <div>
+
+            <span class="badge">
+                PDF · CURRENT RESUME
+            </span>
+
+
+            <h3>
+                Miguel_Paraco_Resume.pdf
+            </h3>
+
+
+            <p>
+                My complete professional resume.
+            </p>
+
+
+            <!--
+                IMPORTANT:
+                Keep Miguel_Paraco_Resume.pdf in the
+                SAME GitHub repository as index.html.
+            -->
+
+
+            <a
+                class="button primary"
+                href="Miguel_Paraco_Resume.pdf"
+                target="_blank">
+
+                Open Resume ↗
+
+            </a>
+
+
+            <a
+                class="button secondary"
+                href="Miguel_Paraco_Resume.pdf"
+                download>
+
+                Download PDF ↓
+
+            </a>
+
+        </div>
+
+
+        <div class="resume-preview">
+
+            <div class="resume-icon">
+                📄
+            </div>
+
+            <strong>
+                Resume.pdf
+            </strong>
+
+            <span>
+                Click "Open Resume" to view
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <div class="section-label">
+        06 — Contact
+    </div>
+
+
+    <h2>
+        Let's connect.
+    </h2>
+
+
+    <p class="description">
+
+        Interested in connecting about finance, business,
+        internships, opportunities, or professional
+        collaboration?
+
+    </p>
+
+
+    <div class="contact-grid">
+
+
+        <!-- UNIVERSITY EMAIL -->
+
+        <a
+            class="contact-card"
+            href="mailto:miguel.p.rojas@utah.edu">
+
+            <div class="icon">
+                ✉
+            </div>
+
+            <h3>
+                University Email
+            </h3>
+
+            <small>
+                miguel.p.rojas@utah.edu
+            </small>
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+
+        <a
+            class="contact-card"
+            href="https://www.linkedin.com/in/miguel-p-rojas/"
+            target="_blank"
+            rel="noopener">
+
+            <div class="icon">
+                in
+            </div>
+
+            <h3>
+                LinkedIn
+            </h3>
+
+            <small>
+                linkedin.com/in/miguel-p-rojas
+            </small>
+
+        </a>
+
+
+        <!-- GITHUB -->
+
+        <!--
+            CHANGE THE LINK BELOW TO YOUR
+            ACTUAL GITHUB PROFILE.
+
+            Example:
+            https://github.com/yourusername
+        -->
+
+        <a
+            class="contact-card"
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener">
+
+            <div class="icon">
+                &lt;/&gt;
+            </div>
+
+            <h3>
+                GitHub
+            </h3>
+
+            <small>
+                GitHub profile
+            </small>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <span>
+        © 2026 Miguel Paraco
+    </span>
+
+    <span>
+        Finance · Advanced Financial Analysis · University of Utah
+    </span>
+
+</footer>
+
+
+</body>
+</html>
